@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Arial Narrow", Arial,
+    sans-serif;
+}
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  filter: blur(8px);
+  /-webkit-filter: blur(3px);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Roboto Condensed", "Helvetica Neue", "Arial Narrow", Arial,
+    sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 8%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 90px;
+  font-style: italic;
+  color: red;
+  text-shadow: 2px 3px 4px Darkred;
+  text-decoration: none;
+  font-weight: 1000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  opacity: 0;
+  animation: slideRight 0.3s ease forwards;
+  transition: font-size 0.3s ease, opacity 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(97, 95, 95, 0.5);
+}
+
+.logo {
+  transition: font-size 0.3s ease;
+}
+
+.navbar a {
+  display: inline-block;
+  font-size: 30px;
+  color: #009a44;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 20px;
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  text-shadow: 2px 1px 3px rgba(195, 187, 187, 0.5);
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #ff8200;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: 60px;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  animation: slideSci 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+.social-media a i {
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgba(230, 226, 226, 0.5);
+}
+
+.social-media a:hover {
+  border-color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(230, 226, 226, 0.5);
+}
+
+.social-media a i {
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(230, 226, 226, 0.5);
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 8% 0;
+  overflow: hidden;
+}
+
+.home-content {
+  padding: 0 50px; /* Padding을 줄이면 컨텐츠가 더 넓어짐 */
+  max-width: 1200px; /* 최대 가로 길이를 설정하여 더 넓게 만듦 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.home-content h1 {
+  font-size: 70px;
+  line-height: 1.2;
+  color: #ff8200;
+  opacity: 0;
+  padding: auto;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
+}
+.cm {
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(111, 90, 58, 0.5);
+}
+.home-content h3 {
+  font-size: 35px;
+  color: red;
+  text-shadow: 2px 2px 4px darkred;
+  padding: auto;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1.3s;
+}
+
+.home-content p {
+  font-size: 25px;
+  margin: 20px 0 20px;
+  color: #d2d4d3;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: darkgreen;
+  border: 2px solid darkgreen;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.5s;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #009a44;
+}
+
+.home-img {
+  position: relative;
+  right: -7%;
+  width: 450px;
+  height: 450px;
+  transform: rotate(45deg);
+}
+
+.home-img .rhombus {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #009a44;
+  box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: zoomOut 1s ease forwards;
+  animation-delay: 1.6s;
+  border-radius: 50px;
+}
+
+.home-img .rhombus img {
+  position: absolute;
+  top: 110px;
+  left: -250px;
+  max-width: 750px;
+  transform: rotate(-45deg);
+  opacity: 0;
+  animation: car 1s ease forwards;
+  animation-delay: 2s;
+}
+
+.home .rhombus2 {
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  width: 1000px;
+  height: 1000px;
+  background: #ff8200;
+  transform: rotate(45deg);
+  z-index: -1;
+  opacity: 0;
+  animation: rhombus2 1s ease forwards;
+  animation-delay: 1.6s;
+  border-radius: 50px;
+}
+
+/*KEYFRAMES ANIMATION*/
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideSci {
+  0% {
+    transform: translateX(100px) rotate(45deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes car {
+  0% {
+    transform: translate(300px, -300px) scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1) rotate(-45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rhombus2 {
+  0% {
+    right: -40%;
+    opacity: 0;
+  }
+
+  100% {
+    right: -25%;
+    opacity: 1;
+  }
+}
